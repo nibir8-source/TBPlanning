@@ -1,0 +1,1877 @@
+<?xml version='1.0\' encoding='ISO-8859-1'?>
+<pomdpx version='0.1' id='tablexmlfac' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='pomdpx.xsd'>
+<Discount>0.99</Discount>
+<Variable>
+	<StateVar vnamePrev="state_0" vnameCurr="state_1" fullyObs="true">
+		<NumValues>22</NumValues>
+	</StateVar>
+	<StateVar vnamePrev="trust_0" vnameCurr="trust_1" fullyObs="false">
+		<ValueEnum>trust1 trust2 trust3 trust4 trust5 trust6 trust7</ValueEnum>
+	</StateVar>
+	<ObsVar vname="obs_sensor">
+		<ValueEnum>robot human</ValueEnum>
+	</ObsVar>
+	<ActionVar vname="action_robot">
+		<ValueEnum>left straight right</ValueEnum>
+	</ActionVar>
+	<RewardVar vname="reward_robot"/>
+</Variable>
+<InitialStateBelief>
+	<CondProb>
+		<Var>state_0</Var><Parent>null</Parent><Parameter type = "TBL"><Entry><Instance>-</Instance><ProbTable>1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</ProbTable> </Entry></Parameter>
+	</CondProb>>
+	<CondProb>
+		<Var>trust_0</Var><Parent>null</Parent><Parameter type = "TBL"><Entry><Instance>-</Instance><ProbTable>0.142857142857143 0.142857142857143 0.142857142857143 0.142857142857143 0.142857142857143 0.142857142857143  0.142857142857143</ProbTable> </Entry></Parameter>
+	</CondProb>>
+</InitialStateBelief>
+<StateTransitionFunction>
+<CondProb>
+	<Var> state_1 </Var> <Parent>action_robot state_0 trust_0</Parent>
+	<Parameter type="TBL">
+		<Entry><Instance>left s0 trust1 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust1 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust1 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust1 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust1 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust1 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust1 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust1 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust1 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust1 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust1 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust1 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust1 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust1 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust1 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust1 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust1 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust1 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust1 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust1 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust1 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust1 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust1 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust1 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust1 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust1 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust2 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust2 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust2 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust2 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust2 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust2 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust2 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust2 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust2 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust2 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust2 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust2 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust2 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust2 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust2 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust2 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust2 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust2 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust2 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust2 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust2 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust2 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust2 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust2 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust2 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust2 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust3 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust3 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust3 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust3 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust3 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust3 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust3 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust3 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust3 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust3 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust3 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust3 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust3 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust3 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust3 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust3 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust3 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust3 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust3 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust3 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust3 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust3 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust3 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust3 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust3 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust3 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust4 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust4 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust4 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust4 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust4 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust4 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust4 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust4 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust4 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust4 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust4 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust4 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust4 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust4 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust4 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust4 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust4 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust4 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust4 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust4 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust4 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust4 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust4 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust4 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust4 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust4 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust5 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust5 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust5 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust5 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust5 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust5 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust5 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust5 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust5 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust5 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust5 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust5 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust5 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust5 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust5 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust5 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust5 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust5 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust5 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust5 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust5 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust5 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust5 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust5 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust5 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust5 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust6 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust6 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust6 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust6 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust6 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust6 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust6 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust6 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust6 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust6 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust6 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust6 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust6 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust6 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust6 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust6 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust6 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust6 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust6 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust6 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust6 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust6 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust6 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust6 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust6 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust6 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust7 s1</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s0 trust7 s2</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s1 trust7 s1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust7 s2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust7 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust7 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust7 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s5 trust7 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s6 trust7 s9</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>left s6 trust7 s10</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>left s7 trust7 s7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust7 s8</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust7 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s9 trust7 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s10 trust7 s13</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s10 trust7 s14</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s11 trust7 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s11 trust7 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s12 trust7 s15</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>left s12 trust7 s16</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>left s13 trust7 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust7 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust7 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust7 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust7 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust7 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust1 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust1 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust1 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust1 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust1 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust1 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust1 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust1 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust1 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust1 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust1 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust1 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust1 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust1 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust1 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust1 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust1 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust1 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust1 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust1 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust1 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust1 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust1 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust1 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust1 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust1 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust1 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust1 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust1 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust1 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust1 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust1 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust2 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust2 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust2 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust2 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust2 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust2 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust2 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust2 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust2 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust2 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust2 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust2 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust2 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust2 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust2 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust2 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust2 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust2 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust2 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust2 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust2 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust2 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust2 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust2 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust2 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust2 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust2 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust2 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust2 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust2 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust2 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust2 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust3 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust3 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust3 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust3 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust3 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust3 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust3 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust3 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust3 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust3 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust3 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust3 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust3 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust3 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust3 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust3 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust3 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust3 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust3 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust3 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust3 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust3 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust3 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust3 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust3 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust3 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust3 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust3 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust3 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust3 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust3 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust3 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust4 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust4 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust4 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust4 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust4 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust4 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust4 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust4 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust4 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust4 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust4 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust4 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust4 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust4 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust4 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust4 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust4 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust4 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust4 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust4 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust4 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust4 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust4 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust4 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust4 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust4 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust4 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust4 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust4 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust4 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust4 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust4 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust5 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust5 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust5 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust5 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust5 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust5 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust5 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust5 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust5 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust5 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust5 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust5 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust5 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust5 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust5 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust5 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust5 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust5 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust5 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust5 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust5 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust5 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust5 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust5 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust5 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust5 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust5 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust5 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust5 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust5 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust5 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust5 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust6 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust6 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust6 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust6 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust6 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust6 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust6 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust6 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust6 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust6 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust6 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust6 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust6 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust6 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust6 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust6 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust6 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust6 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust6 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust6 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust6 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust6 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust6 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust6 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust6 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust6 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust6 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust6 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust6 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust6 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust6 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust6 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust7 s3</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust7 s4</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust7 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust7 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust7 s7</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust7 s8</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust7 s3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust7 s4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust7 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust7 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust7 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust7 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust7 s13</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust7 s14</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust7 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust7 s10</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust7 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust7 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust7 s17</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust7 s18</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust7 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust7 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust7 s19</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust7 s20</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust7 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust7 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust7 s19</Instance><ProbTable>0.7461583177049864179509</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust7 s20</Instance><ProbTable>0.2538416822950135820491</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust7 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust7 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust7 s19</Instance><ProbTable>0.6649406175908058047597</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust7 s20</Instance><ProbTable>0.3350593824091941952403</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust1 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust1 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust1 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust1 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust1 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust1 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust1 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust1 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust1 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust1 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust1 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust1 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust1 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust1 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust1 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust1 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust1 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust1 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust1 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust1 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust1 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust1 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust1 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust1 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust1 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust1 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust1 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust2 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust2 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust2 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust2 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust2 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust2 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust2 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust2 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust2 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust2 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust2 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust2 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust2 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust2 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust2 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust2 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust2 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust2 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust2 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust2 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust2 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust2 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust2 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust2 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust2 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust2 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust2 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust3 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust3 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust3 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust3 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust3 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust3 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust3 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust3 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust3 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust3 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust3 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust3 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust3 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust3 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust3 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust3 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust3 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust3 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust3 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust3 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust3 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust3 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust3 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust3 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust3 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust3 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust3 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust4 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust4 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust4 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust4 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust4 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust4 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust4 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust4 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust4 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust4 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust4 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust4 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust4 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust4 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust4 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust4 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust4 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust4 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust4 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust4 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust4 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust4 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust4 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust4 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust4 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust4 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust4 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust5 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust5 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust5 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust5 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust5 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust5 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust5 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust5 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust5 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust5 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust5 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust5 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust5 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust5 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust5 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust5 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust5 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust5 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust5 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust5 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust5 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust5 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust5 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust5 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust5 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust5 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust5 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust6 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust6 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust6 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust6 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust6 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust6 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust6 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust6 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust6 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust6 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust6 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust6 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust6 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust6 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust6 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust6 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust6 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust6 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust6 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust6 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust6 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust6 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust6 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust6 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust6 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust6 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust6 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust7 s5</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s0 trust7 s6</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s1 trust7 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust7 s9</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust7 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s3 trust7 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s4 trust7 s11</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s4 trust7 s12</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s5 trust7 s5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust7 s6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust7 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s7 trust7 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s8 trust7 s15</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s8 trust7 s16</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s9 trust7 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s9 trust7 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s10 trust7 s17</Instance><ProbTable>0.919938720154878097901</ProbTable></Entry>
+		<Entry><Instance>right s10 trust7 s18</Instance><ProbTable>0.08006127984512190209898</ProbTable></Entry>
+		<Entry><Instance>right s11 trust7 s11</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust7 s12</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust7 s13</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust7 s14</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust7 s15</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust7 s16</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust7 s17</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust7 s18</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust7 s21</Instance><ProbTable>1</ProbTable></Entry>
+	</Parameter>
+</CondProb>
+<CondProb>
+	<Var> trust_1 </Var> <Parent>action_robot state_0 trust_0</Parent>
+	<Parameter type="TBL">
+		<Entry><Instance>left s0 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>left s1 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>left s6 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>left s7 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>left s10 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>left s11 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>left s12 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>left s13 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>straight s1 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>straight s2 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s8 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s12 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s13 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>straight s14 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>straight s15 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s16 - -</Instance><ProbTable>0.083768965822 0.21119444773 0.45733160914 0.23110849416 0.016440420437 0.00015585940206 2.0330454502e-07 0.033348720213 0.11504505994 0.31456125604 0.43402086582 0.099895447997 0.0031156107878 1.303919972e-05 0.0089095977494 0.057189123853 0.16910653717 0.43097181905 0.30253104938 0.030869325955 0.00042254683519 0.0015056009702 0.019907163299 0.089453022095 0.26474441099 0.46588345377 0.15169711123 0.0068092376583 0.00015896937991 0.0044058694788 0.038513469619 0.13689996171 0.39168719627 0.37382337319 0.054511160352 1.0487040277e-05 0.00061052847437 0.011081080159 0.066205113901 0.22018633961 0.48161970565 0.22028674517 4.3673797803e-07 5.341876018e-05 0.0020342397944 0.024329530618 0.11047204345 0.37494602951 0.48816430114</ProbTable></Entry>
+		<Entry><Instance>straight s17 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>straight s18 - -</Instance><ProbTable>0.10800397765 0.40818610427 0.43776355758 0.043340603736 0.0025720458341 0.00013069672042 3.0142100106e-06 0.048447380652 0.14735361266 0.51984771653 0.26773820474 0.015670353986 0.0009075111024 3.5220330197e-05 0.017807351976 0.070524131226 0.22024630204 0.55355159163 0.13187262873 0.0056896410843 0.00030835331446 0.0047523069017 0.031440738685 0.097431892364 0.3348990324 0.47559366443 0.05378028376 0.0021020814592 0.00090699485077 0.010168266385 0.050513470155 0.13263248813 0.46447945699 0.32236649578 0.018932827713 0.00012418264053 0.002359635774 0.019842930133 0.074326713534 0.18935562216 0.54175160447 0.17223931128 1.2448809297e-05 0.00040091680002 0.0057141801809 0.036045993524 0.10367551571 0.30121818855 0.55293275642</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s1 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s4 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s5 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s8 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s9 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s10 - -</Instance><ProbTable>0.038033476936 0.052389125684 0.30139326493 0.50535795302 0.10050866876 0.0023113707093 6.1399632824e-06 0.018115431202 0.038013277228 0.11739381663 0.50360590553 0.30168749755 0.021014910688 0.00016916116971 0.0053739893567 0.024532643126 0.051583319334 0.29420988857 0.51352212191 0.10814084138 0.0026371963186 0.00091708243384 0.009545044975 0.032220246348 0.11828237019 0.50034401265 0.31541079707 0.023280446333 8.7956004098e-05 0.0020962867406 0.01539679155 0.050066083247 0.29117573699 0.52446128669 0.11671585877 4.7291668488e-06 0.00025819807101 0.0043173974256 0.023712765507 0.1189880021 0.51313927132 0.33957963642 1.4395307271e-07 1.8004759439e-05 0.00068917409056 0.0081779249858 0.045508048388 0.32715078282 0.61845592101</ProbTable></Entry>
+		<Entry><Instance>right s11 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust1 trust1</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust2 trust2</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust3 trust3</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust4 trust4</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust5 trust5</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust6 trust6</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust7 trust7</Instance><ProbTable>1</ProbTable></Entry>
+	</Parameter>
+</CondProb>
+</StateTransitionFunction>
+<ObsFunction><CondProb>
+	<Var>obs_sensor</Var><Parent>action_robot state_1 trust_1</Parent>
+	<Parameter type="TBL">
+		<Entry><Instance>left s0 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s0 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s1 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s2 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s3 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s4 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s5 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s6 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s7 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s8 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s9 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s10 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s11 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s12 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s13 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s14 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s15 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s16 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s17 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s18 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s19 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s20 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>left s21 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s0 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s1 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s2 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s3 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s4 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s5 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s6 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s7 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s8 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s9 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s10 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s11 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s12 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s13 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s14 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s15 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s16 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s17 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s18 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s19 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s20 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>straight s21 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s0 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s1 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s2 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s3 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s4 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s5 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s6 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s7 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s8 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s9 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s10 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s11 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s12 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s13 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s14 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s15 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s16 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s17 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust1 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust2 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust3 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust4 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust5 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust6 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s18 trust7 human</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s19 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s20 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust1 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust2 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust3 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust4 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust5 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust6 robot</Instance><ProbTable>1</ProbTable></Entry>
+		<Entry><Instance>right s21 trust7 robot</Instance><ProbTable>1</ProbTable></Entry>
+	</Parameter>
+</CondProb></ObsFunction>
+<RewardFunction>
+<Func>
+	<Var>reward_robot</Var><Parent>action_robot state_0 trust_0</Parent>
+	<Parameter type="TBL">
+		<Entry><Instance>left s0 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s0 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s1 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s2 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s3 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s4 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>left s5 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s6 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>left s7 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s8 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s9 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s10 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s11 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s12 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>left s13 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s14 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s15 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s16 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s17 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s18 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s19 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>left s20 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust1</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust1</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust2</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust2</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust3</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust3</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust4</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust4</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust5</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust5</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust6</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust6</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s0 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s1 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s2 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s3 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s4 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s5 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s6 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>straight s7 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s8 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s9 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s10 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>straight s11 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s12 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s13 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s14 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>straight s15 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s16 trust7</Instance><ValueTable>1.4923</ValueTable></Entry>
+		<Entry><Instance>straight s17 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>straight s18 trust7</Instance><ValueTable>1.9948</ValueTable></Entry>
+		<Entry><Instance>right s0 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust1</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust1</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust1</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust2</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust2</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust2</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust3</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust3</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust3</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust4</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust4</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust4</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust5</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust5</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust5</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust6</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust6</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust6</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s0 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s1 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s2 trust7</Instance><ValueTable>5</ValueTable></Entry>
+		<Entry><Instance>right s3 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s4 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s5 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s6 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s7 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s8 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s9 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s10 trust7</Instance><ValueTable>0.91994</ValueTable></Entry>
+		<Entry><Instance>right s11 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s12 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s13 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s14 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s15 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s16 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s17 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>right s18 trust7</Instance><ValueTable>-999</ValueTable></Entry>
+		<Entry><Instance>* s21 *</Instance><ValueTable>0</ValueTable></Entry>
+	</Parameter>
+</Func></RewardFunction>
+</pomdpx>
